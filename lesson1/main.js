@@ -32,7 +32,7 @@ console.log(typeof(c3)) ;
 
 let name = prompt(`Як вас звати ?`);
 let phatherName = prompt(`Як ви по батькові ?`);
-let years = prompt (`Скільки вам років ?`);
+let years = +prompt (`Скільки вам років ?`);
 
 let person1 = `${name} ${phatherName} ${years}`
 
