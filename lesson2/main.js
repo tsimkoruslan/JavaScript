@@ -3,6 +3,8 @@
 let arrayOfElements = [`ToyotaSupra`, `Nissan180SX`, `HondaCivic`, `MazdaRX-7`, 1, 1.01, true, false, undefined, 99.99];
 console.log(arrayOfElements);
 
+console.log(arrayOfElements[0])
+
 
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
 let books = [
@@ -23,19 +25,19 @@ let books2 = [
         // у завдані пише що автори це масив ... але присвоювати через = не доречно ...
         // то ж я розумію , що тут краще викристати об'єкт ??? Чи все таки так як закоментований код нище ?
         // authors1: [name = `Джон Р. Р. Толкін` , age = `99`] ;
-        authors: {name: `Джон Р. Р. Толкін`, age: 99}
+        authors: [{name: `Джон Р. Р. Толкін`, age: 99}]
     },
     {
         title: `Колгосп тварин`,
         pageCount: 128,
         genre: `classic`,
-        authors: {name: `Джордж Орвел`, age: 99}
+        authors: [{name: `Джордж Орвел`, age: 99}]
     },
     {
         title: `Старий і море`,
         pageCount: 104,
         genre: `classic`,
-        authors: {name: `Ернест Гемінґвей`, age: 99}
+        authors: [{name: `Ернест Гемінґвей`, age: 99}]
     }
 ];
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password.
