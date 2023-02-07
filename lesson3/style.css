@@ -1,0 +1,16 @@
+.product-title {
+    font-size: 20px;
+    color: sienna;
+    display: flex;
+    align-items: center;
+}
+
+.product-image {
+    width: 400px;
+    border-radius: 30%;
+}
+
+.testDiv {
+    display: flex;
+    justify-content: center;
+}
