@@ -20,11 +20,9 @@ emptyArray[2] = 1.2;
 emptyArray[3] = 1.3;
 emptyArray[4] = `qwerty`;
 console.log(emptyArray)
-
-//
-//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // - є масив [2,17,13,6,22,31,45,66,100,-18] :
-let namberArray = [2,17, 13, 6, 22, 31, 45, 66, 100, -18];
+let namberArray = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
 // 1. перебрати його циклом while
 let i = 0;
 while (i < namberArray.length) {
@@ -53,26 +51,27 @@ let w = 0;
 while (w < namberArray.length) {
     if (namberArray[w] % 2 === 0) {
         console.log(namberArray[w]);
-    };
+    }
+    ;
     w++;
 }
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
-for (let number = 0 ; number < namberArray.length ; number++) {
-    if (namberArray[number] % 2 === 0 ){
+for (let number = 0; number < namberArray.length; number++) {
+    if (namberArray[number] % 2 === 0) {
         console.log(namberArray[number]);
     }
 }
 // 7. замінити кожне число кратне 3 на слово "okten"
 
-for (let i = 0 ; i < namberArray.length ; i++) {
-    if (namberArray[i] % 3 === 0){
+for (let i = 0; i < namberArray.length; i++) {
+    if (namberArray[i] % 3 === 0) {
         namberArray[i] = `octen`;
     }
 }
 console.log(namberArray)
 
 // 8. вивести масив в зворотньому порядку.
-for (let i = namberArray.length ; i >= 0 ; i--){
+for (let i = namberArray.length; i >= 0; i--) {
     console.log(namberArray[i]);
 }
 // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
@@ -105,8 +104,21 @@ for (let x = namberArray.length; x >= 0; x -= 2) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // - Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
+let newNamberArray = [23, 34, 45, 56, 67, 78, 89, 90, 12, 10];
+for (const number of newNamberArray) {
+    console.log(number)
+}
 // - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
+let newStrArray = [`23qwe`, `34qwe`, `45qwe`, `56qwe`, `67qwe`, `78qwe`, `89qwe`, `90qwe`, `12qwe`, `10qwe`];
+for (const str of newStrArray) {
+    console.log(str)
+}
 // - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
+let newArray = [1, 2, 3, 4, true, false,`67qwe`, `78qwe`, `89qwe`, `90qwe`, `12qwe`, `10qwe`];
+for (const str of newArray) {
+    console.log(str)
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
 // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
 // - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
