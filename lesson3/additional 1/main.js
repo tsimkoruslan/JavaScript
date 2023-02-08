@@ -24,7 +24,7 @@ console.log(emptyArray)
 //
 //
 // - є масив [2,17,13,6,22,31,45,66,100,-18] :
-let namberArray = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+let namberArray = [2,17, 13, 6, 22, 31, 45, 66, 100, -18];
 // 1. перебрати його циклом while
 let i = 0;
 while (i < namberArray.length) {
@@ -41,7 +41,7 @@ while (q < namberArray.length) {
     if (q % 2 === 0) {
         console.log(namberArray[q]);
     }
-    ;
+
     q++;
 }
 // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
@@ -57,10 +57,53 @@ while (w < namberArray.length) {
     w++;
 }
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
+for (let number = 0 ; number < namberArray.length ; number++) {
+    if (namberArray[number] % 2 === 0 ){
+        console.log(namberArray[number]);
+    }
+}
 // 7. замінити кожне число кратне 3 на слово "okten"
+
+for (let i = 0 ; i < namberArray.length ; i++) {
+    if (namberArray[i] % 3 === 0){
+        namberArray[i] = `octen`;
+    }
+}
+console.log(namberArray)
+
 // 8. вивести масив в зворотньому порядку.
+for (let i = namberArray.length ; i >= 0 ; i--){
+    console.log(namberArray[i]);
+}
 // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
 //
+let z = namberArray.length;
+while (z > namberArray.length) {
+    console.log(namberArray[length]);
+    z--;
+}
+
+for (let x = namberArray.length; x >= 0; x--) {
+    console.log(namberArray[x]);
+}
+
+let qp = namberArray.length;
+while (qp >= 0) {
+    if (qp % 2 === 0) {
+        console.log(namberArray[qp]);
+    }
+    ;
+    qp--;
+}
+
+for (let x = namberArray.length; x >= 0; x -= 2) {
+    console.log(namberArray[x]);
+}
+
+//і так далі.....
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // - Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
 // - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
 // - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
