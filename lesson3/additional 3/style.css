@@ -1,0 +1,18 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-card {
+    width: 20%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    color: #733d24;
+}
