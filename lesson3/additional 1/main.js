@@ -197,8 +197,8 @@ let books = [
     {name: `book1`, pages: 111, author: [`nameauthor`, `nameauthor2`], genre: [`fantasy`]},
     {name: `book2`, pages: 222, author: [`nameauthor `], genre: [`fantasy `, `histori`]},
     {name: `book3`, pages: 333, author: [`nameauthortest`, `nameauthor2`], genre: [`fantasy`, `histori`]},
-    {name: `book4`, pages: 1443, author: [`nameauthor`, `nameauthor2`], genre: [`fantasy`, `histori`]},
-    {name: `book6`, pages: 555, author: [`nameauthor`, `nameauthor999`], genre: [`histori`],},
+    {name: `booоk4`, pages: 1443, author: [`nameauthor`, `nameauthor2`], genre: [`fantasy`, `histori`]},
+    {name: `book6`, pages: 555, author: [`nameauthor`], genre: [`histori`],},
     {name: `book7`, pages: 666, author: [`nameAuthorSebastian`, `nameauthor2`], genre: [`fantasy`, `histori`, `etc`]},
     {name: `book8`, pages: 123, author: [`nameauthorOther`, `nameauthor2`], genre: [`fantasy`, `histori`]},
 ]
@@ -222,7 +222,22 @@ console.log(genreTest)
 
 // - знайти книжку/ки з найдовшою назвою
 
-
-
+let nameBook = books[0].name;
+for (const nameBookElement of books) {
+    if (nameBookElement.name.length > nameBook.length){
+        nameBook = nameBookElement.name
+    }
+}
+console.log(nameBook)
 // - знайти книжку/ки які писали 2 автори
+for (const book of books) {
+    if (book.author.length === 2){
+        console.log(book.author)
+    }
+}
 // - знайти книжку/ки які писав 1 автор
+for (const book of books) {
+    if (book.author.length === 1){
+        console.log(book.author)
+    }
+}
