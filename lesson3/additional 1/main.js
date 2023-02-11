@@ -114,49 +114,115 @@ for (const str of newStrArray) {
     console.log(str)
 }
 // - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
-let newArray = [1, 2, 3, 4, true, false,`67qwe`, `78qwe`, `89qwe`, `90qwe`, `12qwe`, `10qwe`];
+let newArray = [1, 2, 3, 4, true, false, `67qwe`, `78qwe`, `89qwe`, `90qwe`, `12qwe`, `10qwe`];
 for (const str of newArray) {
     console.log(str)
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
-let arrNSB = [1,2,3,4,`o`,`k`,`t`,`e`,`n`,true,false];
+let arrNSB = [1, 2, 3, 4, `o`, `k`, `t`, `e`, `n`, true, false];
 
 for (const arrNSBElement of arrNSB) {
-    if (typeof arrNSBElement === `boolean` ) {
+    if (typeof arrNSBElement === `boolean`) {
         console.log(typeof arrNSBElement);
     }
 }
 // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
 
 for (const test of arrNSB) {
-    if (typeof test === 'number'){
-        console.log(typeof test ,test)
+    if (typeof test === 'number') {
+        console.log(typeof test, test)
     }
 
 }
 // - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
 
 for (const test of arrNSB) {
-    if (typeof test === 'string'){
-        console.log(typeof test ,test)
+    if (typeof test === 'string') {
+        console.log(typeof test, test)
     }
 
 }
 //
 // - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів.
+let arrayArray = [];
+for (let j = 0; j < 10; j++) {
+    arrayArray[j] = j + 1;
+    if (j >= 5) {
+        arrayArray[j] = `qwe`;
+    }
+}
+arrayArray[10] = true;
+arrayArray[11] = false;
+
+console.log(arrayArray)
+
 // Вивести в консоль всі його елементи в циклі.
+for (const arrayArrayElement of arrayArray) {
+    console.log(arrayArrayElement)
+}
 // - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+for (let j = 0; j < 10; j++) {
+    console.log(j);
+    document.write(`<div>${j}</div>`);
+}
 // - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+for (let j = 0; j < 100; j++) {
+    console.log(j);
+    document.write(`<div>${j}</div>`);
+}
 // - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+for (let j = 0; j < 100; j += 2) {
+    console.log(j);
+    document.write(`<div>${j}</div>`);
+}
 // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+for (let j = 0; j < 100; j++) {
+    if (j % 2 === 0) {
+        console.log(j);
+        document.write(`<div>${j}</div>`);
+    }
+}
 // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
-//
-//
+
+for (let j = 0; j < 100; j++) {
+    if (j % 2 > 0) {
+        console.log(j);
+        document.write(`<div>${j}</div>`);
+    }
+}
 //
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
+let books = [
+    {name: `book1`, pages: 111, author: [`nameauthor`, `nameauthor2`], genre: [`fantasy`]},
+    {name: `book2`, pages: 222, author: [`nameauthor `], genre: [`fantasy `, `histori`]},
+    {name: `book3`, pages: 333, author: [`nameauthortest`, `nameauthor2`], genre: [`fantasy`, `histori`]},
+    {name: `book4`, pages: 1443, author: [`nameauthor`, `nameauthor2`], genre: [`fantasy`, `histori`]},
+    {name: `book6`, pages: 555, author: [`nameauthor`, `nameauthor999`], genre: [`histori`],},
+    {name: `book7`, pages: 666, author: [`nameAuthorSebastian`, `nameauthor2`], genre: [`fantasy`, `histori`, `etc`]},
+    {name: `book8`, pages: 123, author: [`nameauthorOther`, `nameauthor2`], genre: [`fantasy`, `histori`]},
+]
 // -знайти наібльшу книжку.
+let max = books[0].pages;
+for (const arrElement of books) {
+    if (arrElement.pages >= max) {
+        max = arrElement.pages;
+    }
+}
+console.log(max)
 // - знайти книжку/ки з найбільшою кількістю жанрів
+
+let genreTest = books[0].genre;
+for (const i of books) {
+    if (i.genre.length > genreTest.length) {
+        genreTest = i.genre;
+    }
+}
+console.log(genreTest)
+
 // - знайти книжку/ки з найдовшою назвою
+
+
+
 // - знайти книжку/ки які писали 2 автори
 // - знайти книжку/ки які писав 1 автор
