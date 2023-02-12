@@ -2,12 +2,12 @@
 let emptyArray = [];
 //     a. заповнити його 50 парними числами за допомоги циклу.
 for (let i = 0; i < 50; i++) {
-    emptyArray[i] = i+i;
+    emptyArray[i] = i + i;
 }
 console.log(emptyArray)
 //     b. заповнити його 50 непарними числами за допомоги циклу.
 for (let i = 0; i < 50; i++) {
-        emptyArray[i] = 2 * i + 1;
+    emptyArray[i] = 2 * i + 1;
 }
 console.log(emptyArray)
 //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
@@ -17,46 +17,53 @@ for (let i = 0; i < 50; i++) {
 console.log(emptyArray)
 // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
 for (let i = 0; i < 50; i++) {
-    emptyArray[i] = Math.floor(Math.random() * 732)+8;
+    emptyArray[i] = Math.floor(Math.random() * 732) + 8;
 }
 console.log(emptyArray)
 // 2. Вивести за допомогою console.log кожен третій елемен
-for (let i = 0; i < emptyArray.length; i+=3) {
+for (let i = 0; i < emptyArray.length; i += 3) {
     console.log(emptyArray[i]);
 }
 // 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
-for (let i = 0; i < emptyArray.length; i+=3) {
-    if (emptyArray[i] % 2 === 0){
+for (let i = 0; i < emptyArray.length; i += 3) {
+    if (emptyArray[i] % 2 === 0) {
         console.log(emptyArray[i]);
     }
 }
 // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
 let newArray = [];
-for (let i = 0; i < emptyArray.length; i+=3) {
-    if (emptyArray[i] % 2 === 0){
-        newArray[length++] = emptyArray[i] ;
+for (let i = 0; i < emptyArray.length; i += 3) {
+    if (emptyArray[i] % 2 === 0) {
+        newArray[length++] = emptyArray[i];
     }
 }
 console.log(newArray)
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 // EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
-let example = [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ];
+let example = [1, 2, 3, 5, 7, 9, 56, 8, 67];
 
 for (let x of example) {
-    if (example[x] % 2 === 0 ){
+    if (example[x] % 2 === 0) {
         console.log(example[--x])
     }
 //НЕ РОЗУМІЮ ЧОГО НЕ ВИВОДИТЬСЯ ЦИФРА 9 ?!
 }
 
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
-let score = [100,250,50,168,120,345,188];
+let score = [100, 250, 50, 168, 120, 345, 188];
 let uah = 0;
 for (let number of score) {
     uah = uah + number;
 }
 console.log(uah)
 // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+let mas = [2, 3, 5, 77, 9];
+let newMas = [];
+
+for (let i = 0 ; i < mas.length; i++) {
+    newMas[i] = 5 * mas[i] ;
+}
+console.log(newMas);
 // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
 //
 //
@@ -98,7 +105,7 @@ console.log(uah)
 //
 //
 //
-//         - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
+// - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
 //
 // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
 //
