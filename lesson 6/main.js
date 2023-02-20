@@ -9,7 +9,7 @@ console.log("'hello world', 'lorem ipsum', 'javascript is cool'".toUpperCase());
 console.log("'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'".toLowerCase());
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
 let str = ' dirty string   ';
-let strClear = str.replaceAll(` `, ``);
+let strClear = str.trim();
 console.log(strClear)
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 let strQuote = 'Ревуть воли як ясла повні';
@@ -72,26 +72,6 @@ let cards = [
     {cardSuit: 'spade', value: 'queen', color: 'black'},
     {cardSuit: 'spade', value: 'king', color: 'black'},
     {cardSuit: 'spade', value: 'ace', color: 'black'},
-    //spade red
-    {cardSuit: 'spade', value: '6', color: 'red'},
-    {cardSuit: 'spade', value: '7', color: 'red'},
-    {cardSuit: 'spade', value: '8', color: 'red'},
-    {cardSuit: 'spade', value: '9', color: 'red'},
-    {cardSuit: 'spade', value: '10', color: 'red'},
-    {cardSuit: 'spade', value: 'jack', color: 'red'},
-    {cardSuit: 'spade', value: 'queen', color: 'red'},
-    {cardSuit: 'spade', value: 'king', color: 'red'},
-    {cardSuit: 'spade', value: 'ace', color: 'red'},
-    //diamond black
-    {cardSuit: 'diamond', value: '6', color: 'black'},
-    {cardSuit: 'diamond', value: '7', color: 'black'},
-    {cardSuit: 'diamond', value: '8', color: 'black'},
-    {cardSuit: 'diamond', value: '9', color: 'black'},
-    {cardSuit: 'diamond', value: '10', color: 'black'},
-    {cardSuit: 'diamond', value: 'jack', color: 'black'},
-    {cardSuit: 'diamond', value: 'queen', color: 'black'},
-    {cardSuit: 'diamond', value: 'king', color: 'black'},
-    {cardSuit: 'diamond', value: 'ace', color: 'black'},
     //diamond red
     {cardSuit: 'diamond', value: '6', color: 'red'},
     {cardSuit: 'diamond', value: '7', color: 'red'},
@@ -102,16 +82,6 @@ let cards = [
     {cardSuit: 'diamond', value: 'queen', color: 'red'},
     {cardSuit: 'diamond', value: 'king', color: 'red'},
     {cardSuit: 'diamond', value: 'ace', color: 'red'},
-    //heart black
-    {cardSuit: 'heart', value: '6', color: 'black'},
-    {cardSuit: 'heart', value: '7', color: 'black'},
-    {cardSuit: 'heart', value: '8', color: 'black'},
-    {cardSuit: 'heart', value: '9', color: 'black'},
-    {cardSuit: 'heart', value: '10', color: 'black'},
-    {cardSuit: 'heart', value: 'jack', color: 'black'},
-    {cardSuit: 'heart', value: 'queen', color: 'black'},
-    {cardSuit: 'heart', value: 'king', color: 'black'},
-    {cardSuit: 'heart', value: 'ace', color: 'black'},
     //heart red
     {cardSuit: 'heart', value: '6', color: 'red'},
     {cardSuit: 'heart', value: '7', color: 'red'},
@@ -132,16 +102,7 @@ let cards = [
     {cardSuit: 'clubs', value: 'queen', color: 'black'},
     {cardSuit: 'clubs', value: 'king', color: 'black'},
     {cardSuit: 'clubs', value: 'ace', color: 'black'},
-    //clubs red
-    {cardSuit: 'clubs', value: '6', color: 'red'},
-    {cardSuit: 'clubs', value: '7', color: 'red'},
-    {cardSuit: 'clubs', value: '8', color: 'red'},
-    {cardSuit: 'clubs', value: '9', color: 'red'},
-    {cardSuit: 'clubs', value: '10', color: 'red'},
-    {cardSuit: 'clubs', value: 'jack', color: 'red'},
-    {cardSuit: 'clubs', value: 'queen', color: 'red'},
-    {cardSuit: 'clubs', value: 'king', color: 'red'},
-    {cardSuit: 'clubs', value: 'ace', color: 'red'},
+
 ]
 // - знайти піковий туз
 let spadeAce = [];
