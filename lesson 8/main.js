@@ -42,35 +42,69 @@ class Client {
         this.order = order;
     }
 }
+
 // створити пустий масив, наповнити його 10 об'єктами Client
 let arrClient = [
-    new Client(1,`userName`,`surName`,`@mail`,`+09876543212345`,`121`),
-    new Client(2,`userName`,`surName`,`@mail`,`+09876543212345`,`902`),
-    new Client(3,`userName`,`surName`,`@mail`,`+09876543212345`,`163`),
-    new Client(4,`userName`,`surName`,`@mail`,`+09876543212345`,`804`),
-    new Client(5,`userName`,`surName`,`@mail`,`+09876543212345`,`175`),
-    new Client(6,`userName`,`surName`,`@mail`,`+09876543212345`,`136`),
-    new Client(7,`userName`,`surName`,`@mail`,`+09876543212345`,`187`),
-    new Client(8,`userName`,`surName`,`@mail`,`+09876543212345`,`708`),
-    new Client(9,`userName`,`surName`,`@mail`,`+09876543212345`,`209`),
-    new Client(10,`userName`,`surName`,`@mail`,`+09876543212345`,`310`),
+    new Client(1, `userName`, `surName`, `@mail`, `+09876543212345`, `121`),
+    new Client(2, `userName`, `surName`, `@mail`, `+09876543212345`, `902`),
+    new Client(3, `userName`, `surName`, `@mail`, `+09876543212345`, `163`),
+    new Client(4, `userName`, `surName`, `@mail`, `+09876543212345`, `804`),
+    new Client(5, `userName`, `surName`, `@mail`, `+09876543212345`, `175`),
+    new Client(6, `userName`, `surName`, `@mail`, `+09876543212345`, `136`),
+    new Client(7, `userName`, `surName`, `@mail`, `+09876543212345`, `187`),
+    new Client(8, `userName`, `surName`, `@mail`, `+09876543212345`, `708`),
+    new Client(9, `userName`, `surName`, `@mail`, `+09876543212345`, `209`),
+    new Client(10, `userName`, `surName`, `@mail`, `+09876543212345`, `310`),
 ]
 console.log(arrClient);
 // - Взяти масив (Client [] з попереднього завдання).
 // Відсортувати його по кількості товарів в полі order по зростанню. (sort)
-let arrSort = arrClient.sort((a,b) => a.order - b.order);
+let arrSort = arrClient.sort((a, b) => a.order - b.order);
 console.log(arrSort)
 //
 // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,
-// максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// максимальна швидкість, об'єм двигуна.
+// додати в об'єкт функції:
+// // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+// // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
 
-// -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
-// -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
-// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-// -- changeYear (newValue) - змінює рік випуску на значення newValue
-// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-//
-//
+// // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// // -- changeYear (newValue) - змінює рік випуску на значення newValue
+// // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+// //
+function CreatorCar(model, manufacturer, year, maxSpeed, engine) {
+    this.model = model;
+    this.manufacturer = manufacturer;
+    this.year = year;
+    this.maxSpeed = maxSpeed;
+    this.engine = engine;
+    this.drive = function () {
+        console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)
+    };
+    this.info = function () {
+        console.log(`Модель авто - ${this.model}
+         Країна виробника - ${this.manufacturer}
+         Рік випуску - ${this.year}
+         Максимальна швидкість - ${this.maxSpeed}
+         Об'єм двигуна - ${this.engine}`)
+    };
+    this.increaseMaxSpeed = function (newSpeed) {
+        this.maxSpeed = newSpeed;
+    };
+    this.changeYear = function (newValue) {
+        this.year = newValue;
+    };
+    this.addDriver = function (driver){
+
+    };
+
+};
+
+
+let car = new CreatorCar(`Audi`, `Germany`, 2000, 280, `2,8`);
+console.log(car.addDriver({name: `123`}));
+console.log(car);
+
 // - (Те саме, тільки через клас)
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
