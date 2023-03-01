@@ -99,7 +99,7 @@ let simpsons = [
 
 for (const simpson of simpsons) {
     let div = document.createElement(`div`);
-    div.append(simpson.name , simpson.surname , simpson.age);
+    div.append(simpson.name, simpson.surname, simpson.age);
     document.body.append(div)
 }
 
@@ -185,13 +185,16 @@ for (const i of coursesArray) {
     title.append(i.title);
     monthDuration.append(i.monthDuration);
     hourDuration.append(i.hourDuration);
-         for (const item of i.modules) {
-             let modulesItem = document.createElement(`li`)
-             modulesItem.append(item)
-             modules.append(modulesItem)
-         }
+    for (const item of i.modules) {
+        let modulesItem = document.createElement(`li`)
+        modulesItem.append(item)
+        modules.append(modulesItem)
+    }
 
-    parent.append(title,monthDuration,hourDuration,modules)
+    parent.append(title, monthDuration, hourDuration, modules)
+    title.style.border = `solid`
+    title.style.display = `flex`
+    title.style.justifyContent = `center`
     document.body.append(parent);
 
 }
@@ -205,7 +208,7 @@ for (const i of coursesArray) {
 //     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
 let input = document.createElement(`input`);
 document.body.append(input)
-    // далі я шось не викупаю або забув або незнаю
+
 
 // *** Створити 3 інпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
