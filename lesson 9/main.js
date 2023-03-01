@@ -190,11 +190,29 @@ for (const i of coursesArray) {
         modulesItem.append(item)
         modules.append(modulesItem)
     }
-
-    parent.append(title, monthDuration, hourDuration, modules)
+    let div2 = document.createElement(`div`);
+    div2.append(monthDuration, hourDuration,)
+    parent.append(title, div2, modules)
     title.style.border = `solid`
     title.style.display = `flex`
     title.style.justifyContent = `center`
+    title.style.marginBottom = `5px`
+    //
+    div2.style.display =`flex`
+    //
+    monthDuration.style.border = `solid`
+    monthDuration.style.width = `30%`
+    monthDuration.style.display = `flex`
+    monthDuration.style.justifyContent = `center`
+    monthDuration.style.marginBottom = `5px`
+    monthDuration.style.marginRight = `5px`
+
+    //
+    hourDuration.style.border = `solid`
+    hourDuration.style.width = `70%`
+    hourDuration.style.display = `flex`
+    hourDuration.style.justifyContent = `center`
+    hourDuration.style.marginBottom = `5px`
     document.body.append(parent);
 
 }
