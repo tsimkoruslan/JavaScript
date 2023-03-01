@@ -117,32 +117,13 @@ let coursesArray = [
         title: 'Java Complex',
         monthDuration: 6,
         hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'java core',
-            'java advanced']
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'git', 'java core', 'java advanced']
     },
     {
         title: 'Python Complex',
         monthDuration: 6,
         hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'python core',
-            'python advanced']
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'python core', 'python advanced']
     },
     {
         title: 'QA Complex',
@@ -155,18 +136,7 @@ let coursesArray = [
         monthDuration: 7,
         hourDuration: 909,
         modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'react',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'node.js',
-            'python',
-            'java']
+            'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js', 'python', 'java']
     },
     {
         title: 'Frontend',
@@ -182,6 +152,7 @@ for (const i of coursesArray) {
     let monthDuration = document.createElement(`div`);
     let hourDuration = document.createElement(`div`);
     let modules = document.createElement(`ul`);
+    let div2 = document.createElement(`div`);
     title.append(i.title);
     monthDuration.append(i.monthDuration);
     hourDuration.append(i.hourDuration);
@@ -190,7 +161,6 @@ for (const i of coursesArray) {
         modulesItem.append(item)
         modules.append(modulesItem)
     }
-    let div2 = document.createElement(`div`);
     div2.append(monthDuration, hourDuration,)
     parent.append(title, div2, modules)
     title.style.border = `solid`
@@ -206,13 +176,13 @@ for (const i of coursesArray) {
     monthDuration.style.justifyContent = `center`
     monthDuration.style.marginBottom = `5px`
     monthDuration.style.marginRight = `5px`
-
     //
     hourDuration.style.border = `solid`
     hourDuration.style.width = `70%`
     hourDuration.style.display = `flex`
     hourDuration.style.justifyContent = `center`
     hourDuration.style.marginBottom = `5px`
+    //
     document.body.append(parent);
 
 }
