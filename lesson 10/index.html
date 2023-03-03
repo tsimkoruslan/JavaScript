@@ -15,24 +15,42 @@
             justify-content: center;
             align-items: center;
             color: aliceblue;
+            border-radius: 50%;
+        }
+        .a {
+            color: rgba(255, 255, 255, 0.98);
+            background: #293342;
+            margin: 20px;
         }
     </style>
     <title>Document</title>
 </head>
 <body>
 <!--method = "post"-->
-<form >
+<form>
     <input type="text" name="name" placeholder="name">
     <br>
     <input type="text" name="surname" placeholder="surname">
     <br>
     <input type="number" name="age" placeholder="age" min="0" max="110">
     <br>
-    <button name="creat" >Creat block</button>
+    <button name="creat">Creat block</button>
 </form>
 
-<div class="counter" id="counterId" >0</div>
+<div class="counter" id="counterId">0</div>
 
+<form>
+    <button>reset local storage </button>
+</form>
+
+<a href="sessions.html" >
+    <button class="a">time list</button>
+</a>
+<br>
+<form>
+    <button name="prev">prev</button>
+    <button name="next">next</button>
+</form>
 <script src="main.js"></script>
 </body>
 </html>
