@@ -5,9 +5,33 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .counter {
+            background: #293342;
+            height: 100px;
+            width: 100px;
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
+<!--method = "post"-->
+<form >
+    <input type="text" name="name" placeholder="name">
+    <br>
+    <input type="text" name="surname" placeholder="surname">
+    <br>
+    <input type="number" name="age" placeholder="age" min="0" max="110">
+    <br>
+    <button name="creat" >Creat block</button>
+</form>
+
+<div class="counter" id="counterId" ></div>
 
 <script src="main.js"></script>
 </body>
