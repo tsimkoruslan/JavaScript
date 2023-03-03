@@ -21,7 +21,7 @@ form.onsubmit = function (ev) {
 // є сторінка, на якій є блок, я кому знаходиьтся цифра. написати код, який при кожному перезавантажені сторінки буде додавати до неї +1
 
 let counter = document.getElementById(`counterId`);
-window.onload = function () {
+onload = function () {
     let num = parseInt(localStorage.getItem("counterValue")) || 0;
     let numNew = num + 1;
     counter.textContent = numNew;
@@ -36,7 +36,7 @@ reset[1].onclick = function () {
 // Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще, в масив sessions зберігається інформація
 // про дату та час відвідування сторінки.
 
-window.addEventListener(`load`, function () {
+addEventListener(`load`, function () {
     let data = new Date();
     let sessionsArray = JSON.parse(localStorage.getItem(`sessions`)) || [];
     sessionsArray.push(data)
@@ -648,27 +648,61 @@ let arrayObject = [
         "title": "at nam consequatur ea labore ea harum",
         "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
     }
+// localStorage.setItem(`arrayObject`,JSON.stringify(arrayObject))
+// let newArray = JSON.parse(localStorage.getItem(`arrayObject`))
 ];
+let array = JSON.parse( JSON.stringify(arrayObject));
+//
+// // при завантажені сторінки з'являються перші 10 об'єктів.
+// let ul = document.createElement(`ul`)
+// let prev = document.getElementsByName(`prev`);
+// let next = document.getElementsByName(`next`);
+//
+// addEventListener(`load`, function () {
+//     let endIter = parseInt(localStorage.getItem(`endIter`,10) || 10)
+//     let startIter = parseInt(localStorage.getItem(`startIter`,0) || 0)
+//         for (let i = startIter; i < endIter; i++) {
+//             let li = document.createElement(`li`);
+//             let json = JSON.stringify(newArray[i])
+//             li.append(json);
+//             ul.append(li);
+//             ul.style.fontSize = `10px`
+//             document.body.append(ul)
+//
+//
+//     }
+//     next[0].addEventListener(`click`, function () {
+//         localStorage.setItem(`endIter`,JSON.stringify(20));
+//         localStorage.setItem(`startIter`,JSON.stringify(10))
+//     });
+//     prev[0].addEventListener(`click`, function () {
+//         localStorage.setItem(`endIter`,JSON.stringify(10));
+//         localStorage.setItem(`startIter`,JSON.stringify(20))
+//     })
+// })
+
+let buttonPrev = document.getElementsByName(`prev`);
+let buttonNext = document.getElementsByName(`next`);
 // при завантажені сторінки з'являються перші 10 об'єктів.
-let ul = document.createElement(`ul`)
-let prev = document.getElementsByName(`prev`);
-let endIter  = 10;
-let startIter = 0;
-window.addEventListener(`load`, function () {
-    let array = arrayObject;
-    for (let i = startIter; i < endIter; i++) {
-        let li = document.createElement(`li`);
-        let json = JSON.stringify(array[i])
-        li.append(json);
-        ul.append(li);
-        ul.style.fontSize = `10px`
-        document.body.append(ul)
-    }
+let ul = document.createElement(`ul`);
+
+let start = localStorage.getItem(`start`) || 0 ;
+let end = localStorage.getItem(`end`) || 10 ;
+
+for (let i = start; i < end; i++) {
+    let li = document.createElement(`li`);
+    li.append(JSON.stringify(array[i]));
+    ul.append(li);
+    document.body.append(ul)
+}
+
+buttonNext[0].addEventListener(`click`,function (){
+    let str = JSON.stringify(localStorage.getItem(`start`));
+    console.log(str)
+
 })
-    prev[0].addEventListener(`click`, function () {
-        startIter = 10;
-        endIter = 20;
-    })
+
+
 //     При натисканні next виводяться настпні 10 об'єктів
 // При натисканні prev виводяться попередні 10 об'єктів
 //
