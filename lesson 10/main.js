@@ -22,12 +22,17 @@ form.onsubmit = function (ev) {
 
 //зробити через локалсторедж
 
-// let counter = document.getElementById(`counterId`);
-// let n = 0;
-//     window.onload = function (){
-//         n++ ;
-//         counter.append(n);
-//     }
+
+    let counter = document.getElementById(`counterId`);
+    window.onload = function (){
+    let num = parseInt(localStorage.getItem("counterValue")) || 0;
+    let numNew = num + 1 ;
+    counter.textContent = numNew;
+    localStorage.setItem(`counterValue`,numNew);
+    }
+
+
+
 
 // ==========================
 // Є сторінка index.html (назва довільна), при відвідуванні якої в локальне сховще, в масив sessions зберігається інформація про дату та час відвідування сторінки. Є ще сторінка sessions.html (назва довільна), при відвідуванні якої потрібно відмалювати всю інформацію про відвідування сторінки index.html. Інфу НЕ виводити в консоль, а побудувати дом структуру під кожну сессію
