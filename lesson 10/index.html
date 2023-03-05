@@ -6,6 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .reset{
+            color: red;
+            width: 300px;
+            height: 50px;
+        }
         .counter {
             background: #293342;
             height: 100px;
@@ -22,17 +33,20 @@
             background: #293342;
             margin: 20px;
         }
+        .marg{
+            margin-bottom: 10px;
+        }
     </style>
     <title>Document</title>
 </head>
 <body>
 <!--method = "post"-->
 <form>
-    <label><input type="text" name="name" placeholder="name"></label>
+    <label><input class="marg" type="text" name="name" placeholder="name"></label>
     <br>
-    <label><input type="text" name="surname" placeholder="surname"></label>
+    <label><input class="marg" type="text" name="surname" placeholder="surname"></label>
     <br>
-    <label><input type="number" name="age" placeholder="age" min="0" max="110"></label>
+    <label><input class="marg" type="number" name="age" placeholder="age" min="0" max="110"></label>
     <br>
     <button name="creat">Creat block</button>
 </form>
@@ -40,7 +54,7 @@
 <div class="counter" id="counterId">0</div>
 
 <form>
-    <button>reset local storage </button>
+    <button class="reset" >reset local storage </button>
 </form>
 
 <a href="sessions.html" >
@@ -52,6 +66,9 @@
     <button name="prev">prev</button>
     <button name="next">next</button>
 </form>
+
+
+<button><a href="additional.html" style="color: red ; text-decoration: none" >Додадкове завдання</a></button>
 
 <script src="main.js"></script>
 </body>
