@@ -1,0 +1,23 @@
+body{
+    background: #582b2f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.feather {
+    font-size: 250px;
+    color: #9f9c9c;
+    margin-bottom: 100px;
+}
+.link{
+    font-size: 80px;
+    border-radius: 35px;
+    background: #98897b;
+    color: #D9D9D9;
+    font-family: Georgia;
+}
+.link:hover{
+    font-size: 90px;
+}
