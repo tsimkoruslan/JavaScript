@@ -1,0 +1,56 @@
+body {
+    font-family: Georgia;
+    background: #582b2f;
+}
+h1{
+    margin-bottom: 0px;
+}
+.ParentDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.title {
+    color: #D9D9D9;
+    font-size: 35px;
+}
+.idInfoP {
+    color: #AC9C8D;
+}
+.bodyPost{
+    color: #b8a297;
+    font-size: 20px;
+}
+.divComment {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+}
+.childComment {
+    width: 20%;
+    box-sizing: border-box;
+    padding: 10px;
+    background: #98897b;
+    border-radius: 25px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+.textComment{
+    display: flex;
+    justify-content: center;
+    color: #c6b2a3;
+}
+.nameCommentH4{
+    color: #D9D9D9;
+}
+.email{
+    color: #582b2f;
+}
