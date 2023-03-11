@@ -22,7 +22,7 @@ function recurs (item){
 }
 recurs(user)
 
-//creat <button> (post of current user)
+//creat <button> (post of current user) and (post_details)
 let button = document.createElement('button');
 let titleDiv = document.createElement('div')
 button.innerText = 'post of current user';
@@ -30,12 +30,18 @@ button.innerText = 'post of current user';
         ev.preventDefault();
         fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
             .then(value => value.json())
-            .then(users => {
-                for (const user of users) {
+            .then(posts => {
+                for (const post of posts) {
                    let title =  document.createElement('h4');
-                   title.innerText = user.title;
-                    titleDiv.appendChild(title)
-                   document.body.appendChild(titleDiv);
+                   let button = document.createElement('button');
+                   let a = document.createElement('a');
+                             title.innerText = `"${post.title}"`;
+                             titleDiv.appendChild(title);
+                    a.innerText = 'post-details';
+                    a.href = '../post/post-details.html?post=' + JSON.stringify(post);
+                    button.appendChild(a);
+                         titleDiv.appendChild(button);
+                              document.body.appendChild(titleDiv);
                 }
             })
     }
